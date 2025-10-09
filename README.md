@@ -1,6 +1,8 @@
-# Hi There
+# Yay, you're here!
 
-I am a Student, you can find out more about me here: [LinkedIn Profile](https://linkedin.com/in/ianktoo) and [GitHub Profile](https://github.com/ianktoo). Let's focus on the projects below 👇
+I am Ian, a MSCS Student, you can find out more about me here: [LinkedIn Profile](https://linkedin.com/in/ianktoo) and [GitHub Profile](https://github.com/ianktoo). 
+
+For now let's focus on the projects below 👇.
 
 # Homework
 
