@@ -2,6 +2,10 @@
 
 Ian's Homework, notes, observations, projects and exercises from the Machine Learning Engineer course
 
+- Exciting 😃
+- Fun 😁
+- Innovative! 🤯
+
 ## Table of contents
 ### Homework
 
