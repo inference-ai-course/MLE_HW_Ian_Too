@@ -6,7 +6,7 @@ Ian's Homework and exercises and notes from week 1.
 
 | Module | Link | Description |
 |---|----|---|
-| 01 | [Homework Notebook](./Module_1/Homework.ipynb), [] | |
+| 01 | [Homework Notebook](./Module_1/Homework.ipynb) | |
 | 02 | | |
 | 03 | | |
 | 04 | | |
