@@ -1,3 +1,7 @@
+# Hi There
+
+I am a Student, you can find out more about me here: [LinkedIn Profile](https://linkedin.com/in/ianktoo) and [GitHub Profile](https://github.com/ianktoo). Let's focus on the projects below 👇
+
 # Homework
 
 Ian's Homework, notes, observations, projects and exercises from the Machine Learning Engineer course
