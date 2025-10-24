@@ -1,3 +1,4 @@
 # Environment file
 .env.local
 ./tesseract
+venv/
