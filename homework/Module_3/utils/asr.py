@@ -1,4 +1,5 @@
 import os
+import logging
 import tempfile
 import whisper
 
@@ -19,4 +20,5 @@ def transcribe_audio(audio_bytes, original_filename):
 
         # Transcribe using Whisper
         result = asr_model.transcribe(temp_audio.name)
+        
         return result.get("text", "")

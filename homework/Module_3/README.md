@@ -18,6 +18,17 @@ uvicorn main:app --reload
 
 ---
 
+### Transcription
+
+I transcribed my audio using the [openai-whisper](https://github.com/openai/whisper?tab=readme-ov-file) library
+
+---
+
+### LLM
+
+Using huggingface [Transformers](https://huggingface.co/docs/transformers/en/installation) library
+
+
 ### Dependencies
 
 Found in the `requirements.txt` file.
