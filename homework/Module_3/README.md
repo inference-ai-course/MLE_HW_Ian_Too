@@ -28,6 +28,17 @@ I transcribed my audio using the [openai-whisper](https://github.com/openai/whis
 
 Using huggingface [Transformers](https://huggingface.co/docs/transformers/en/installation) library
 
+Note: I decided to use a local lightweight llm, Ollama
+
+
+### TTS
+
+[Index TTS2](https://github.com/index-tts/index-tts)
+
+``` bash
+git clone https://github.com/index-tts/index-tts.git && cd index-tts
+git lfs pull  # download large repository files
+```
 
 ### Dependencies
 
