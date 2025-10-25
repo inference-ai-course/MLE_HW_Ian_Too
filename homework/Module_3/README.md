@@ -35,6 +35,10 @@ Note: I decided to use a local lightweight llm, Ollama
 
 [Index TTS2](https://github.com/index-tts/index-tts)
 
+[PYTTSX3](https://pypi.org/project/pyttsx3/)
+
+[Bento TTS](https://github.com/bentoml/BentoXTTS)
+
 ``` bash
 git clone https://github.com/index-tts/index-tts.git && cd index-tts
 git lfs pull  # download large repository files

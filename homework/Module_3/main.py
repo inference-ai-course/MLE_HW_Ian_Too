@@ -2,8 +2,10 @@ import os
 import time
 import logging
 
+
+from fastapi import FastAPI, Response, UploadFile, Request, File
+
 # Import necessary libraries
-from fastapi import FastAPI, UploadFile, File, Request
 from fastapi.responses import FileResponse
 
 
@@ -13,6 +15,9 @@ from utils.asr import transcribe_audio
 
 # llm response
 from utils.response_gen import generate_response, generate_response_ollama
+
+# tts
+from utils.tts import bentoml_ttx_get_audio, save_audio_to_folder
 
 # upload dir
 UPLOAD_DIR = "uploads/temp"
@@ -70,11 +75,25 @@ async def chat_endpoint(request: Request, file: UploadFile = File(...)):
 
     # text to speech
 
+    logging.debug("Connecting to bentoml ttx")
+    api_url = "http://localhost:3000/synthesize"
+    lang = "en"
+
+    audio_bytes = bentoml_ttx_get_audio(llm_response, lang, api_url)
+    logging.debug("Got the bytes")
+
+    # Optional: save to file
+    save_audio_to_folder(audio_bytes, "audio_outputs", "voice_sample.wav")
+
+    logging.debug("Saved audio")
+
+
+
     # file path 
     # # TODO: Return the actual file.
     # This is a placeholder for testing purposes
     return FileResponse(
-        path=uploaded_file, # use the uploaded file as placeholder
+        path="output.wav", # use the uploaded file as placeholder
         media_type="audio/mpeg",
         filename="test.mp3"
     )
@@ -85,3 +104,10 @@ async def chat_endpoint(request: Request, file: UploadFile = File(...)):
 #logging.debug(f"{generate_response_ollama('Hello there, what is your name?')}")
 #logging.debug(f"{generate_response_ollama('Can we go home together?')}")
 #logging.debug(f"{generate_response_ollama('Remind me your name again? I am Ian Too')}")
+
+
+
+api_url = "http://localhost:3000/synthesize"
+lang = "en"
+logging.debug("Got the bytes")
+save_audio_to_folder(bentoml_ttx_get_audio(generate_response_ollama("Name 3 items you like. Keept it short."), lang, api_url), "audio_outputs", "voice_sample_3things.wav")

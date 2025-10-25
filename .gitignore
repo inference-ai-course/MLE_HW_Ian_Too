@@ -2,3 +2,4 @@
 .env.local
 ./tesseract
 venv/
+.venv/
